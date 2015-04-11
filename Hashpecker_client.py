@@ -2,11 +2,19 @@ from socket import *
 import sys
 
 
-Alpha="0123456789AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz"
+Alpha="0123456789AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz" # the default alphabet
 ToSend=''
-default_stp=20000000
+default_stp=20000000 # the default step
 
-Hash=0
+# -------------
+#
+# Step is the number of combinations for each machine to go through.
+# When this work was done but the password wasn't found, the server signals failure
+# Otherwise it reports success and sends the password to the client.
+#
+# -------------
+
+Hash=0 # initializing variables
 Type=0
 Start=0
 stp=0
